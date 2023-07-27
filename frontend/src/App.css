@@ -28,6 +28,42 @@
   color: #61dafb;
 }
 
+.bg-dark{
+  background-color: #282c34;
+}
+
+.bg-light {
+  background-color: #ffffff;
+}
+
+.red {
+  color: red;
+}
+
+.border-round {
+  border-radius: 50%;
+}
+
+.default {
+  background-color: #bababa;
+  color: #282c34;
+}
+
+.danger {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+.message.user {
+  background-color: #282c34;
+  color: #ffffff;
+}
+
+.message.assistant {
+  background-color: #ffffff;
+  color: #282c34;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

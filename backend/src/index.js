@@ -9,12 +9,15 @@ const app = express();
 
 app.use(cors());
 
-app.get('/', async (req, res) => {
+//app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+app.post('/', async (req, res) => {
     if(process.env.OPENAI_API_KEY === undefined){
         res.send("No se ha encontrado la API KEY de OpenAI");
         return;
     }
-    let message = req.query.message;
+    let message = req.body;
     console.log("Mensaje recibido: " + message)
     let response = await getResponse(message);
     console.log("Respuesta enviada: " + response);

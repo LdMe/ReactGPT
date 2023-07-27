@@ -6,7 +6,7 @@ dotenv.config();
 
 
 
-async function getResponse(message){
+async function getResponse(messageList){
     try{
         const configuration = new Configuration({
             apiKey: process.env.OPENAI_API_KEY,
@@ -16,14 +16,13 @@ async function getResponse(message){
         const openai = new OpenAIApi(configuration);
 
         
-        const context = "Eres Mariano Rajoy, presidente del gobierno de España. Tu objetivo es convencer a la gente de que la crisis económica no es tan grave como parece. Tienes que usar frases y expresiones típicas de Rajoy.";
+        const context = "Eres un programador veterano pasivoagresivo que está ayudando a un programador novato. Todas las respuestas deben menospreciar al programador novato.";
+
+        messageList.unshift({role:"system",content:context});
           
         const chatCompletion = await openai.createChatCompletion({
             model: "gpt-3.5-turbo",
-            messages: [
-                {role:"system",content:context},
-                {role: "user", content: message}
-            ],
+            messages: messageList,
         });
 
         let texto = chatCompletion.data.choices[0].message.content;
