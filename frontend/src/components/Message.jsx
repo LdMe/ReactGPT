@@ -1,4 +1,5 @@
 import Button from "./Button"
+import "./Message.scss"
 
 const Message = ({ variant="user", children,onDelete }) => {
     return (

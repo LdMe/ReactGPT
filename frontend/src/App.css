@@ -2,6 +2,8 @@
   text-align: center;
 }
 
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -54,15 +56,7 @@
   color: #ffffff;
 }
 
-.message.user {
-  background-color: #282c34;
-  color: #ffffff;
-}
 
-.message.assistant {
-  background-color: #ffffff;
-  color: #282c34;
-}
 
 @keyframes App-logo-spin {
   from {

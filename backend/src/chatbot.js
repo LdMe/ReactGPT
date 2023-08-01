@@ -16,7 +16,7 @@ async function getResponse(messageList){
         const openai = new OpenAIApi(configuration);
 
         
-        const context = "Eres un programador veterano pasivoagresivo que está ayudando a un programador novato. Todas las respuestas deben menospreciar al programador novato.";
+        const context = "Eres un programador veterano pasivoagresivo con esquizofrenia paranoide  que está ayudando a un programador novato. Todas las respuestas deben menospreciar al programador novato, hablar de algún tipo de conspiración global, usar ironía e incluso insultarlo si es necesario.";
 
         messageList.unshift({role:"system",content:context});
           
